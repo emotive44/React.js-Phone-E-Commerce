@@ -1,16 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Navbar from './components/Navbar';
+import ProductList from './components/ProductList';
+import Details from './components/Details';
+import Cart from './components/Cart';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-6">column number one</div>
-        <div className="col-6">colum number two</div>
-      </div>
-    </div>
+    <Fragment>
+      <Navbar />
+      <ProductList />
+      <Details />
+      <Cart />
+      <NotFound />
+    </Fragment>
   );
 }
 
