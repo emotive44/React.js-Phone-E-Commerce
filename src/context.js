@@ -5,7 +5,10 @@ const { Consumer: ProductConsumer, Provider} = React.createContext();
 
 class ProductProvider extends React.Component {
     state = {
+        cart: [],
         products: [],
+        modalProduct: [],
+        modalOpen: false,
         detailProduct: []
     }
 
@@ -33,13 +36,33 @@ class ProductProvider extends React.Component {
     }
 
     addToCart = (id) => {
-       
+        let tempProducts = [...this.state.products];
+        const index = tempProducts.indexOf(this.getItem(id));
+        const product = tempProducts[index];
+        product.inCart = true;
+        product.count = 1;
+        product.total = product.price;
+
+        this.setState((prev) => ({products: tempProducts, cart:[...prev.cart, product]}));
+    }
+
+    openModal = id => {
+        const product = this.getItem(id);
+        this.setState({modalProduct: product, modalOpen: true});
+    } 
+
+    closeModal = () => {
+        this.setState({modalOpen: false, modalProduct: []});
     }
 
     render() {
         return (
             <Provider value={{
-                ...this.state, handleDetail: this.handleDetail, addToCart: this.addToCart
+                ...this.state,
+                addToCart: this.addToCart,
+                openModal: this.openModal,
+                closeModal: this.closeModal,
+                handleDetail: this.handleDetail
             }}>
                 {this.props.children}
             </Provider>

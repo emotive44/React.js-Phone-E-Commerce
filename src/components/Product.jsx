@@ -17,7 +17,10 @@ class Product extends React.Component {
                                         <img src={img} alt="phone" className="card-img-top mb-3"/>
                                     </Link>
                                     
-                                    <button className="cart-btn" disabled={inCart ? true : false} >
+                                    <button className="cart-btn" 
+                                        disabled={inCart ? true : false} 
+                                        onClick={() => {data.addToCart(id); data.openModal(id)}}
+                                    >
                                         {inCart
                                             ? (<p className="text-capitalize mb-0" disabled>in inCart</p>)
                                             : (<i className="fas fa-cart-plus"/>)

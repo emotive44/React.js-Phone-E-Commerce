@@ -44,7 +44,10 @@ class Details extends React.Component {
                                                 </ButtonContainer>
                                             </Link>
 
-                                            <ButtonContainer cart disabled={inCart ? true : false} onClick={data.addToCart(id)}>
+                                            <ButtonContainer cart 
+                                                disabled={inCart ? true : false} 
+                                                onClick={() => {data.addToCart(id); data.openModal(id)}}
+                                            >
                                                 {inCart ? 'InCart' : 'Add To Cart'}
                                             </ButtonContainer> 
                                         </div>
