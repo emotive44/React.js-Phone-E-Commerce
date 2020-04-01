@@ -5,16 +5,35 @@ const { Consumer: ProductConsumer, Provider} = React.createContext();
 
 class ProductProvider extends React.Component {
     state = {
-        detailProduct,
-        products: storeProducts
+        products: [],
+        detailProduct: []
     }
 
-    handleDetail = () => {
-        console.log('hello from detail');
+    componentDidMount() {
+        this.setProducts();
+    }
+
+    setProducts = () => {
+        let products = [];
+        storeProducts.map(item => {
+            const singleItem = {...item};
+            products = [...products, singleItem];
+        });
+        this.setState({products})
+    }
+
+    getItem = id => {
+        const product = this.state.products.find(item => item.id === id);
+        return product;
+    }
+
+    handleDetail = (id) => {
+        const product = this.getItem(id);
+        this.setState({detailProduct: product})
     }
 
     addToCart = (id) => {
-        console.log('hello from cart', id);
+       
     }
 
     render() {
