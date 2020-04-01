@@ -17,7 +17,7 @@ class Navbar extends React.Component {
                         <Link to='/' className="nav-link">Products</Link>
                     </li>
                 </ul>
-                <Link to='/cart' className="ml-auto">
+                <Link to='/store' className="ml-auto">
                     <ButtonContainer>
                         <span className="mr-2">
                             <i className="fas fa-cart-plus" />
