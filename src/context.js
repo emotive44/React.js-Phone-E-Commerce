@@ -62,11 +62,25 @@ class ProductProvider extends React.Component {
     }
 
     increment = id => {
+        let tempCart = [...this.state.cart];
+        let selectedProduct = this.getItem(id);
 
+        selectedProduct.count += 1;
+        selectedProduct.total = selectedProduct.count * selectedProduct.price;
+        this.setState({cart: [...tempCart]}, () => this.addTotals())
     }
 
     decrement = id => {
-        console.log('ne');
+        let tempCart = [...this.state.cart];
+        let selectedProduct = this.getItem(id);
+        
+        selectedProduct.count -= 1;
+        selectedProduct.total = selectedProduct.count * selectedProduct.price;
+        this.setState({cart: [...tempCart]}, () => this.addTotals())
+        
+        if(selectedProduct.count === 0) {
+            this.removeItem(id);
+        }
     }
 
     removeItem = id => {
