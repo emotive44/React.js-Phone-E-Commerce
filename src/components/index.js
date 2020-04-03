@@ -1,0 +1,6 @@
+export { default as Navbar } from './Navbar/Navbar'
+export { default as ProductList } from './Product/ProductList'
+export { default as Details } from './Details/Details'
+export { default as Cart } from './Cart/Cart'
+export { default as NotFound } from './NotFound/NotFound'
+export { default as Modal } from './Modal/Modal'
