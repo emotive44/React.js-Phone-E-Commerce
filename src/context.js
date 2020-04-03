@@ -46,7 +46,10 @@ class ProductProvider extends React.Component {
         product.count = 1;
         product.total = product.price;
 
-        this.setState((prev) => ({products: tempProducts, cart:[...prev.cart, product]}));
+        this.setState((prev) => ({
+            products: tempProducts, 
+            cart:[...prev.cart, product]
+        }), () => { this.addTotals() });
     }
 
     openModal = id => {
@@ -59,7 +62,7 @@ class ProductProvider extends React.Component {
     }
 
     increment = id => {
-        console.log('da')
+
     }
 
     decrement = id => {
@@ -72,6 +75,17 @@ class ProductProvider extends React.Component {
 
     clearCart = () => {
         console.log('cle')
+    }
+
+    addTotals = () => {
+        let subTotal = 0;
+        this.state.cart.map(item => {
+            subTotal += item.total;
+        });
+        const tempTax = subTotal * 0.1;
+        const tax  = parseFloat(tempTax.toFixed(2));
+        const total = subTotal + tax;
+        this.setState({cartSubTotal: subTotal, cartTax: tax, cartTotal: total});
     }
 
     render() {
