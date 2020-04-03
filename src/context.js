@@ -70,7 +70,21 @@ class ProductProvider extends React.Component {
     }
 
     removeItem = id => {
-        console.log('ned')
+        let tempCart = [...this.state.cart];
+        let tempProducts = [...this.state.products];
+
+        tempCart = tempCart.filter(product => product.id !== id);
+
+        let productsWithResetItem = tempProducts.map(item => { 
+            if(item.id === id) {
+                item.inCart = false;
+                item.count = 0;
+                item.total = 0;
+             return item;
+            }
+            return item;
+        })
+        this.setState({cart: tempCart, products: productsWithResetItem}, () => this.addTotals());
     }
 
     clearCart = () => {
@@ -78,7 +92,7 @@ class ProductProvider extends React.Component {
         products.map(item => {
             item.inCart = false;
         })
-        this.setState({cart: [], products});
+        this.setState({cart: [], products}, () => this.addTotals());
     }
 
     addTotals = () => {
