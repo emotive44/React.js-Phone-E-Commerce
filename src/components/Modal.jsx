@@ -12,14 +12,14 @@ class Modal extends React.Component {
                     data => {
                         const { modalOpen, closeModal } = data;
                         const { img, title, price } = data.modalProduct;
-                        console.log(data.modalProduct)
                         if(!modalOpen) { return null };
                         return (
                             <ModalContainer>
                                 <div className="container">
                                     <div className="row">
-                                        <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize p-5">
+                                        <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 text-center text-capitalize ">
                                             <h5>item added to the cart</h5>
+                                            <button className="exit" onClick={closeModal}>X</button>
                                             <img src={img} alt="phone" className="img-fluid"/>
                                             <h5>{title}</h5>
                                             <h5 className="text-muted">Price : ${price}</h5>
@@ -54,9 +54,28 @@ const ModalContainer = styled.div`
     position: fixed;
     align-items: center;
     justify-content: center;
-    backgroung: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+
     #modal {
         background: var(--mainWhite);
+        border-radius: 1rem;
+    }  
+    .exit {
+        position: absolute;
+        top:0;
+        right: 0;
+        background: var(--mainYellow);
+        border: none;
+        outline: none;
+        transition: all 0.6s linear;
+        padding: 0 0.5rem;
+        border-radius: 0 0.5rem 0 0 ;
+        font-size: 2rem;
+    }
+    
+    .exit:hover {
+        background: var(--lightBlue);
+        color: var(--mainDark)
     }
 `;
 

@@ -8,8 +8,11 @@ class ProductProvider extends React.Component {
         cart: [],
         products: [],
         modalProduct: [],
+        detailProduct: [],
         modalOpen: false,
-        detailProduct: []
+        cartSubTotal: 0,
+        cartTotal: 0,
+        cartTax: 0
     }
 
     componentDidMount() {
@@ -55,6 +58,22 @@ class ProductProvider extends React.Component {
         this.setState({modalOpen: false, modalProduct: []});
     }
 
+    increment = id => {
+        console.log('da')
+    }
+
+    decrement = id => {
+        console.log('ne');
+    }
+
+    removeItem = id => {
+        console.log('ned')
+    }
+
+    clearCart = () => {
+        console.log('cle')
+    }
+
     render() {
         return (
             <Provider value={{
@@ -62,7 +81,11 @@ class ProductProvider extends React.Component {
                 addToCart: this.addToCart,
                 openModal: this.openModal,
                 closeModal: this.closeModal,
-                handleDetail: this.handleDetail
+                handleDetail: this.handleDetail,
+                removeItem: this.removeItem,
+                increment: this.increment,
+                decrement: this.decrement,
+                clearCart: this.clearCart
             }}>
                 {this.props.children}
             </Provider>
