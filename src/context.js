@@ -74,7 +74,11 @@ class ProductProvider extends React.Component {
     }
 
     clearCart = () => {
-        console.log('cle')
+        let products = [...this.state.products];
+        products.map(item => {
+            item.inCart = false;
+        })
+        this.setState({cart: [], products});
     }
 
     addTotals = () => {
