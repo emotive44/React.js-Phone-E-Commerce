@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ButtonContainer from './styles/Button';
-import { ProductConsumer } from '../context';
+import ButtonContainer from '../styles/Button';
+import { ProductConsumer } from '../../context';
 
 class Details extends React.Component {
     render() {

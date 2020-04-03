@@ -1,6 +1,6 @@
 import React from 'react';
-import ButtonWrapper from '../components/styles/Button'
-import ButtonContainer from '../components/styles/Button';
+import ButtonWrapper from '../styles/Button'
+import ButtonContainer from '../styles/Button';
 import { Link } from 'react-router-dom';
 
 class NotFound extends React.Component {

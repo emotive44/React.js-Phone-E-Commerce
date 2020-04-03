@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { ProductConsumer } from '../../context';
-import Title from '../Title';
+import Title from '../Product/Title';
 import CartColumns from './CartColumns';
 import CartList from './CartList';
 import CartTotal from './CartTotal';

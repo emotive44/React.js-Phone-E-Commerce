@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import {Switch, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Navbar from './components/Navbar';
-import ProductList from './components/ProductList';
-import Details from './components/Details';
+import Navbar from './components/Navbar/Navbar';
+import ProductList from './components/Product/ProductList';
+import Details from './components/Details/Details';
 import Cart from './components/Cart/Cart';
-import NotFound from './components/NotFound';
-import Modal from './components/Modal';
+import NotFound from './components/NotFound/NotFound';
+import Modal from './components/Modal/Modal';
 
 function App() {
   return (

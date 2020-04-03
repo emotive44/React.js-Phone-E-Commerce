@@ -1,5 +1,5 @@
 import React from 'react';
-import { storeProducts, detailProduct } from './data';
+import { storeProducts, detailProduct } from './mockups/data';
 
 const { Consumer: ProductConsumer, Provider} = React.createContext();
 
