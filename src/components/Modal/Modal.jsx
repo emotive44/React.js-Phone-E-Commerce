@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductConsumer } from '../../context';
+import { ProductContext } from '../../context';
 import ModalContainer from './ModalContainer';
 import ButtonContainer from '../styles/Button';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class Modal extends React.Component {
     render() {
         return (
-            <ProductConsumer>
+            <ProductContext.Consumer>
                 {
                     data => {
                         const { modalOpen, closeModal } = data;
@@ -40,7 +40,7 @@ class Modal extends React.Component {
                         )
                     }
                 }
-            </ProductConsumer>
+            </ProductContext.Consumer>
         )
     }
 }

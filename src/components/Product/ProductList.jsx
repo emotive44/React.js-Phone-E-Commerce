@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Product from './Product';
 import Title from './Title';
-import { ProductConsumer } from '../../context'
+import { ProductContext } from '../../context'
 
 class ProductList extends React.Component {
     render() {
@@ -11,13 +11,13 @@ class ProductList extends React.Component {
                     <div className="container">
                         <Title name="our" title="products"/>
                         <div className="row">
-                            <ProductConsumer>
+                            <ProductContext.Consumer>
                                 {(data) => {
                                     return data.products.map( product => {
                                         return <Product key={product.id} {...product} />
                                     });
                                 }}
-                            </ProductConsumer>
+                            </ProductContext.Consumer>
                         </div>
                     </div>
                 </div>

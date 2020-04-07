@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ButtonContainer from '../styles/Button';
-import { ProductConsumer } from '../../context';
+import { ProductContext } from '../../context';
 
 class Details extends React.Component {
     render() {
         return(
-            <ProductConsumer>
+            <ProductContext.Consumer>
                 {
                     data => {
                         const {id, company, img, info, price, title, inCart } = data.detailProduct;
@@ -57,7 +57,7 @@ class Details extends React.Component {
                         )
                     }
                 }
-            </ProductConsumer>
+            </ProductContext.Consumer>
         )
     }
 }

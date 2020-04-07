@@ -1,39 +1,29 @@
-import React, { Fragment } from 'react';
-import { ProductConsumer } from '../../context';
+import React, { Fragment, useContext } from 'react';
+import { ProductContext } from '../../context';
 import Title from '../Product/Title';
 import CartColumns from './CartColumns';
 import CartList from './CartList';
 import CartTotal from './CartTotal';
 
-class Cart extends React.Component {
-   
-    render() {
-      return (
-        <section>
-          <ProductConsumer>
-            {
-              data => {
-                const { cart } = data;
+const Cart = () =>  {
+   const productContext = useContext(ProductContext);
 
-                if(cart.length < 1) {
-                    return <h1>Your Cart Is Currently Empty</h1>
-                }
-
-                return (
-                    <Fragment>
-                        <Title name="your" title="cart"/>
-                        <CartColumns />
-                        <CartList data={data} cart={cart} />
-                        <CartTotal data={data} />
-                    </Fragment>
-                )
-              }
-            }
-          </ProductConsumer>
-        </section>
-      )
-    }
-       
+    return (
+      <section>
+        {
+          productContext.cart.length
+          ? (
+            <Fragment>
+                  <Title name="your" title="cart"/>
+                  <CartColumns />
+                  <CartList data={productContext} cart={productContext.cart} />
+                  <CartTotal data={productContext} />
+              </Fragment>
+          )
+          : (<h1>Your Cart Is Currently Empty</h1>)
+        }
+      </section>
+    ) 
 }
 
 export default Cart;

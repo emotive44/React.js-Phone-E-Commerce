@@ -1,7 +1,7 @@
 import React from 'react';
 import { storeProducts, detailProduct } from './mockups/data';
 
-const { Consumer: ProductConsumer, Provider} = React.createContext();
+export const ProductContext = React.createContext();
 
 class ProductProvider extends React.Component {
     state = {
@@ -122,7 +122,7 @@ class ProductProvider extends React.Component {
 
     render() {
         return (
-            <Provider value={{
+            <ProductContext.Provider value={{
                 ...this.state,
                 addToCart: this.addToCart,
                 openModal: this.openModal,
@@ -134,9 +134,9 @@ class ProductProvider extends React.Component {
                 clearCart: this.clearCart
             }}>
                 {this.props.children}
-            </Provider>
+            </ProductContext.Provider>
         )
     }
 }
 
-export { ProductProvider, ProductConsumer };
+export { ProductProvider };

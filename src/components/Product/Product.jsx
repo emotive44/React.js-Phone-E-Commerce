@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ProductConsumer } from '../../context';
+import { ProductContext } from '../../context';
 import ProductWrapper from './ProductWrapper';
 
 class Product extends React.Component {
@@ -9,7 +9,7 @@ class Product extends React.Component {
         return(
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
                 <div className="card">
-                    <ProductConsumer>
+                    <ProductContext.Consumer>
                         {
                             data => (
                                 <div className="img-container p-5" onClick={() => data.handleDetail(id)}>
@@ -29,7 +29,7 @@ class Product extends React.Component {
                                 </div>
                             )
                         }
-                    </ProductConsumer>
+                    </ProductContext.Consumer>
                     <div className="card-footer d-flex justify-content-between">
                         <p className="align-self-center mb-0">{title}</p>
                         <h5 className="text-blue font-italic mb-0">${price}</h5>
