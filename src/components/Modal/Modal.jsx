@@ -10,6 +10,7 @@ class Modal extends React.Component {
             <ProductContext.Consumer>
                 {
                     data => {
+                        if(!data || !data.modalProduct) { return null }
                         const { modalOpen, closeModal } = data;
                         const { img, title, price } = data.modalProduct;
                         if(!modalOpen) { return null };

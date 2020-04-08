@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component should reder correctly 1`] = `
+<nav
+  className="sc-AxirZ hPnYIg navbar navbar-expand-sm navbar-dark px-sm-5 "
+>
+  <Link
+    to="/"
+  >
+    <img
+      alt="store"
+      className="navbar-brand"
+      src="logo.svg"
+    />
+  </Link>
+  <ul
+    className="navbar-nav align-items-center"
+  >
+    <li
+      className="nav-item ml-5"
+    >
+      <Link
+        className="nav-link"
+        to="/"
+      >
+        Products
+      </Link>
+    </li>
+  </ul>
+  <Link
+    className="ml-auto"
+    to="/store"
+  >
+    <button
+      className="sc-AxjAm IwjNC"
+    >
+      <span
+        className="mr-2"
+      >
+        <i
+          className="fas fa-cart-plus"
+        />
+      </span>
+      My cart
+    </button>
+  </Link>
+</nav>
+`;

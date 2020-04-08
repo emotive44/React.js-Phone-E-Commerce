@@ -2,6 +2,7 @@ import React from 'react';
 import CartItem from './CartItem';
 
 export default function CartList({ data, cart }) {
+    if(!cart) { return null }
     return (
         <div className="container-fluid">
             {

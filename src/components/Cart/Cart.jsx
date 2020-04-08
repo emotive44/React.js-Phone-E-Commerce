@@ -6,8 +6,9 @@ import CartList from './CartList';
 import CartTotal from './CartTotal';
 
 const Cart = () =>  {
-   const productContext = useContext(ProductContext);
-
+  const productContext = useContext(ProductContext);
+  if(!productContext) { return null }
+  
     return (
       <section>
         {

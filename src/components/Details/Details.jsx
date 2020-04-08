@@ -9,6 +9,7 @@ class Details extends React.Component {
             <ProductContext.Consumer>
                 {
                     data => {
+                        if(!data) { return null }
                         const {id, company, img, info, price, title, inCart } = data.detailProduct;
                         return (
                             <div className="container py-5">

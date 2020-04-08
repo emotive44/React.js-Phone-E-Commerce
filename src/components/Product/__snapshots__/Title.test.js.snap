@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component should render correct passed name and title: 
+            <div
+            className="row"
+            >
+                <div
+                    className="col-10 mx-auto my-2 text-center"
+                >
+                    <h1
+                    className="text-capitalize font-weight-bold"
+                    >
+                    some Name
+                    </h1>
+                    <h3
+                    className="text-capitalize font-weight-bold"
+                    >
+                    some Title
+                    </h3>
+                </div>
+            </div>
+         1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-10 mx-auto my-2 text-center"
+  >
+    <h1
+      className="text-capitalize font-weight-bold"
+    >
+      some Name
+    </h1>
+    <h3
+      className="text-capitalize font-weight-bold"
+    >
+      some Title
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Title component should render undefiend if name or title is undefiend 1`] = `null`;

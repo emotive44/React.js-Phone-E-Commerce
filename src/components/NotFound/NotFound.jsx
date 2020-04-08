@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 class NotFound extends React.Component {
     render() {
-        return(
+        if(!this.props.location) { return null };
+        return (
             <div className="container">
                 <div className="row">
                     <div className="col-10 mx-auto text-center text-capitalize pt-5">

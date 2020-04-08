@@ -13,6 +13,7 @@ class ProductList extends React.Component {
                         <div className="row">
                             <ProductContext.Consumer>
                                 {(data) => {
+                                    if(!data) { return null }
                                     return data.products.map( product => {
                                         return <Product key={product.id} {...product} />
                                     });

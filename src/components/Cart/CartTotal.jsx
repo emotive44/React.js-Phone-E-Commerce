@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function CartTotal({ data }) {
+    if(!data) { return null }
     const { cartSubTotal, cartTax, cartTotal, clearCart } = data;
     return (
         <Fragment>

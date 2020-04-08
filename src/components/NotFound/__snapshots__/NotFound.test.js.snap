@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound Component should render return null if pathname is undefiend 1`] = `null`;

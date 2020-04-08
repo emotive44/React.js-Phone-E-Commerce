@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component should render null if data is undefiend 1`] = `null`;
+
+exports[`Modal Component should render null if modalOpen is false 1`] = `null`;
+
+exports[`Modal Component should render null if modalProduct is undefined 1`] = `null`;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Title = ({ name, title }) => {
+    if(!name || !title) { return null };
     return (
         <div className="row">
             <div className="col-10 mx-auto my-2 text-center">
