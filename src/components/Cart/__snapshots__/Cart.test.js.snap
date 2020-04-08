@@ -1,3 +1,227 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Cart component should render 1`] = `null`;
+exports[`Cart component should render 1`] = `
+<section>
+  <div
+    className="row"
+  >
+    <div
+      className="col-10 mx-auto my-2 text-center"
+    >
+      <h1
+        className="text-capitalize font-weight-bold"
+      >
+        your
+      </h1>
+      <h3
+        className="text-capitalize font-weight-bold"
+      >
+        cart
+      </h3>
+    </div>
+  </div>
+  <div
+    className="container-fluid text-center d-none d-lg-block"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-10 mx-auto col-lg-2"
+      >
+        <p
+          className="text-uppercase"
+        >
+          products
+        </p>
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2"
+      >
+        <p
+          className="text-uppercase"
+        >
+          name of product
+        </p>
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2"
+      >
+        <p
+          className="text-uppercase"
+        >
+          price
+        </p>
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2"
+      >
+        <p
+          className="text-uppercase"
+        >
+          quantity
+        </p>
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2"
+      >
+        <p
+          className="text-uppercase"
+        >
+          remove
+        </p>
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2"
+      >
+        <p
+          className="text-uppercase"
+        >
+          total
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container-fluid"
+  >
+    <div
+      className="row text-capitalize text-center my-2"
+    >
+      <div
+        className="col-10 mx-auto col-lg-2"
+      >
+        <img
+          alt="product"
+          className="img-fluid"
+          src="img/product-1.png"
+          style={
+            Object {
+              "height": "5rem",
+              "width": "5rem",
+            }
+          }
+        />
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2 my-3"
+      >
+        <span
+          className="d-lg-none"
+        >
+          Product : 
+        </span>
+        Google Pixel - Black
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2 my-3"
+      >
+        <span
+          className="d-lg-none"
+        >
+          Price : 
+        </span>
+        10
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2 my-3 y-lg-0"
+      >
+        <div
+          className="d-flex justify-content-center"
+        >
+          <span
+            className="btn btn-black mx-1"
+            onClick={[Function]}
+          >
+            -
+          </span>
+          <span
+            className="btn btn-black mx-1"
+          >
+            0
+          </span>
+          <span
+            className="btn btn-black mx-1"
+            onClick={[Function]}
+          >
+            +
+          </span>
+        </div>
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2 my-3"
+      >
+        <div
+          className="cart-icon"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-trash"
+          />
+        </div>
+      </div>
+      <div
+        className="col-10 mx-auto col-lg-2 my-3"
+      >
+        <strong>
+          Item Total : $
+          0
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 text-capitalize text-right"
+      >
+        <Link
+          to="/"
+        >
+          <button
+            className="btn btn-outline-danger text-uppercase mb-3 px-5"
+            onClick={[Function]}
+            type="button"
+          >
+            clear cart
+          </button>
+        </Link>
+        <h5>
+          <span
+            className="text-title"
+          >
+            subtotal : 
+          </span>
+          <strong>
+            $ 
+          </strong>
+        </h5>
+        <h5>
+          <span
+            className="text-title"
+          >
+            tax : 
+          </span>
+          <strong>
+            $ 
+          </strong>
+        </h5>
+        <h5>
+          <span
+            className="text-title"
+          >
+            total : 
+          </span>
+          <strong>
+            $ 
+          </strong>
+        </h5>
+      </div>
+    </div>
+  </div>
+</section>
+`;
